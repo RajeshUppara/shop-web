@@ -1,0 +1,30 @@
+<mat-progress-bar mode="indeterminate" *ngIf="showLoader" color="warn" style="position: fixed; width: 100%"></mat-progress-bar>
+<div >
+    <!-- <mat-toolbar color="primary" class="header" style="background-color: white;height:60px !important; border-bottom: 1px solid #c6d0da;" fxLayout="row" fxLayoutAlign="space-between center">
+        <div fxLayout="row wrap" fxLayoutAlign="start start">
+        
+            <span style="height: 60px; padding-left: 1rem" fxLayout="row" fxLayoutAlign="start center" >
+                    <img src="../assets/images/logo.png" alt="logo-brand" style="height: 30px">
+                    <h4 style="color: #5f6f81"> LOGO HERE</h4>
+            </span>
+           
+        
+        </div>
+        <div fxLayout="row" fxLayoutAlign="center center">
+            <span fxLayoutAlign="center center" class="my-profile" [matMenuTriggerFor]="menu"  >{{menuLetter}}</span>
+            <mat-menu #menu="matMenu" [overlapTrigger]="false" >
+                <button mat-menu-item (click)=myProfile()>My Profile</button>
+                <button mat-menu-item (click)="logout()">Log Out</button>
+            </mat-menu>
+        </div>
+    </mat-toolbar> -->
+</div>
+
+<mat-sidenav-container>
+    <!-- <mat-sidenav #sidenav [mode]="navMode" opened="true"  style="border-right: 1px solid #c6d0da;height: 100vh;width: 60px;">
+        <app-menu></app-menu>
+    </mat-sidenav> -->
+    <mat-sidenav-content>
+        <router-outlet></router-outlet>
+    </mat-sidenav-content>
+</mat-sidenav-container>
