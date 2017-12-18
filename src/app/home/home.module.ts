@@ -7,11 +7,12 @@ import { DomainComponent } from './domain/domain/domain.component';
 import { DomainEditComponent } from './domain/domain-edit/domain-edit.component';
 import { DomainListComponent } from './domain/domain-list/domain-list.component';
 import { DomainService } from './domain/domain.service';
+import { DomainHomeComponent } from './domain/domain-home/domain-home.component';
 
 
 
 const routes: Routes = [
-  { path: '', component: DomainComponent},
+  { path: '', component: DomainHomeComponent},
   { path: 'domain', component: DomainComponent},
 
 ];
@@ -25,7 +26,8 @@ const routes: Routes = [
   declarations: [
     DomainComponent,
     DomainEditComponent,
-    DomainListComponent
+    DomainListComponent,
+    DomainHomeComponent
   ],
   exports: [RouterModule],
   providers: [ DomainService ]

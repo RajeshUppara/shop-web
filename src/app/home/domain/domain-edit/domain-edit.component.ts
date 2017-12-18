@@ -28,6 +28,7 @@ export class DomainEditComponent implements OnInit {
     if (changes.hasOwnProperty('inputData')) {
         if(this.inputData){
           this.domain = this.inputData;
+          
         }
         
     }
@@ -36,5 +37,7 @@ export class DomainEditComponent implements OnInit {
   save() {
     console.log(this.domain);
     this.outputEmitter.next(this.domain);
+    
+    this.domain = new Domain();
   }
 }

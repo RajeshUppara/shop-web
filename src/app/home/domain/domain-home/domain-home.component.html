@@ -1,0 +1,47 @@
+<aside>
+  <!-- <article>
+    <h5>Domain</h5>
+    <div class="postfix">
+      <button mat-button (click)="add(null)">
+         <mat-icon> add </mat-icon>
+      </button>
+    </div>
+  </article> -->
+  <main>
+    <mat-drawer-container style="height: 95vh">
+      <mat-drawer mode="side" opened="true" style="background-color: rgb(15, 32, 50); width:230px;height:100%">
+        <app-domain-list [(inputData)]="dataList" (outputEmitter)="add($event)"></app-domain-list>
+      </mat-drawer>
+      <mat-drawer-content style="background-color:rgb(227, 231, 235)">
+        <mat-toolbar style="background-color: rgb(35, 56, 77)">Domains</mat-toolbar>
+        <div fxLayout="row" fxLayoutAlign="center middle">
+          <button routerLink="/domain" mat-raised-button><mat-icon matListIcon style="color:black">add_circle</mat-icon> Add Domain</button>
+        </div>
+      </mat-drawer-content>
+    </mat-drawer-container>
+    <!-- <mat-sidenav-container class="example-container">
+            <mat-sidenav mode="side" opened="true">Sidenav content</mat-sidenav>
+            <mat-sidenav-content>Main content</mat-sidenav-content>
+          </mat-sidenav-container> -->
+
+
+    <!-- <mat-sidenav-container >
+              <mat-sidenav #sidenav mode="side" class="app-sidenav">
+                  <mat-nav-list>
+                      <a md-list-item href="page1.html">Page 1</a>
+                      <a md-list-item href="page2.html">Page 2</a>
+                      <a md-list-item href="page3.html">Page 3</a>
+                  </mat-nav-list>
+                  </mat-sidenav>
+                  <mat-toolbar color="primary">
+                      <button md-icon-button (click)="sidenav.toggle()">
+                          <mat-icon class="md-24" >menu</mat-icon>
+                      </button>
+                  </mat-toolbar>
+              <div class="app-content">
+                  Example Content area<br><br><br><br><br><br><br>
+              </div>
+          </mat-sidenav-container> -->
+
+  </main>
+</aside>
